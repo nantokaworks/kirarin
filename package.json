@@ -1,0 +1,66 @@
+{
+  "name": "kirarin",
+  "version": "0.0.1",
+  "description": "Kirarin Text & Image :)",
+  "keywords": [
+    "react",
+    "sparkle",
+    "kirarin",
+    "text",
+    "iamge"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ichiql/kirarin.git"
+  },
+  "author": "Yamashita, Shinichi",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "vite build && tsc -p tsconfig.build.json",
+    "build:panda": "panda codegen --clean",
+    "format": "pnpm dlx sort-package-json && pnpm dlx sort-compiler-options && pnpm dlx sort-compiler-options -c tsconfig.build.json && pnpm dlx prettier --write './**/*.{ts,tsx}' 'tsconfig*.json'",
+    "lint": "eslint ./src/*",
+    "prepare": "panda codegen --clean",
+    "prepublish": "pnpm build",
+    "storybook": "storybook dev -p 6006"
+  },
+  "prettier": "@ichiql/prettier-config",
+  "dependencies": {
+    "@ichiql/use-random-call": "^0.0.1"
+  },
+  "devDependencies": {
+    "@ichiql/prettier-config": "^0.1.1",
+    "@ichiql/use-prefers-reduced-motion": "^0.0.2",
+    "@pandacss/dev": "^0.23.0",
+    "@pandacss/preset-panda": "^0.23.0",
+    "@pandacss/types": "^0.23.0",
+    "@types/react": "^18.2.46",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.53.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup-plugin-visualizer": "^5.12.0",
+    "storybook-dark-mode": "^3.0.3",
+    "typescript": "^5.0.4",
+    "vite": "^4.3.9",
+    "vite-plugin-no-bundle": "^3.0.0"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

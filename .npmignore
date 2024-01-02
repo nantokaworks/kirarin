@@ -1,0 +1,9 @@
+.turbo
+node_modules
+src
+docs
+test
+.eslintrc.js
+tsconfig.json
+tsconfig.build.json
+vite.config.js
