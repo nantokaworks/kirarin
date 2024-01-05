@@ -89,9 +89,9 @@ devDependencies:
   vite:
     specifier: ^4.3.9
     version: 4.5.1
-  vite-plugin-no-bundle:
-    specifier: ^3.0.0
-    version: 3.0.0
+  vite-plugin-css-injected-by-js:
+    specifier: ^3.3.1
+    version: 3.3.1(vite@4.5.1)
   vite-plugin-svgr:
     specifier: ^4.2.0
     version: 4.2.0(typescript@5.3.3)(vite@4.5.1)
@@ -9290,11 +9290,12 @@ packages:
     engines: {node: '>= 0.8'}
     dev: true
 
-  /vite-plugin-no-bundle@3.0.0:
-    resolution: {integrity: sha512-B8O4ZmWHbA8MWhsCqjcxwCLW5Kk2Q1Ax7JhZBBB/ort+DNONkBA2HND0d9lQ5d0Q+JSOMYAQDDQ1qAS1nmThyA==}
+  /vite-plugin-css-injected-by-js@3.3.1(vite@4.5.1):
+    resolution: {integrity: sha512-PjM/X45DR3/V1K1fTRs8HtZHEQ55kIfdrn+dzaqNBFrOYO073SeSNCxp4j7gSYhV9NffVHaEnOL4myoko0ePAg==}
+    peerDependencies:
+      vite: '>2.0.0-0'
     dependencies:
-      fast-glob: 3.3.2
-      micromatch: 4.0.5
+      vite: 4.5.1
     dev: true
 
   /vite-plugin-svgr@4.2.0(typescript@5.3.3)(vite@4.5.1):

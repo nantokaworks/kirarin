@@ -1,6 +1,6 @@
 import { range } from 'anoare'
 import { useState } from 'react'
-import { css } from 'styled-system/css'
+import { css, cx } from 'styled-system/css'
 import { usePrefersReducedMotion } from 'use-prefers-reduced-motion'
 import { useRandomInterval } from 'use-random-interval'
 import { SpanWrapper, StrongWrapper } from '~/Wrapper'
@@ -21,6 +21,7 @@ export interface Props {
   frequencyMs?: { min: number; max: number }
   first?: number
   strong?: boolean
+  className?: string
 }
 
 /**
@@ -43,8 +44,9 @@ export function Kirarin({
   strong = true,
   first = 3,
   children,
+  className,
   ...others
-}: Props) {
+}: Props & React.HTMLAttributes<HTMLSpanElement>) {
   const notKirarin = usePrefersReducedMotion()
 
   const [datas, setDatas] = useState(() => {
@@ -74,7 +76,10 @@ export function Kirarin({
 
   return (
     <span
-      className={css({ display: 'inline-block', position: 'relative' })}
+      className={cx(
+        css({ display: 'inline-block', position: 'relative', w: 'fit-content' }),
+        className
+      )}
       {...others}
     >
       {datas.map((p) => (

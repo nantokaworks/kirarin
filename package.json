@@ -1,6 +1,6 @@
 {
   "name": "kirarin",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Kirarin Text & Image :)",
   "keywords": [
     "react",
@@ -18,6 +18,13 @@
   "type": "module",
   "main": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
   "scripts": {
     "build": "vite build && tsc -p tsconfig.build.json",
     "build:docs": "typedoc",
@@ -58,7 +65,7 @@
     "use-prefers-reduced-motion": "^0.0.1",
     "use-random-interval": "^0.0.5",
     "vite": "^4.3.9",
-    "vite-plugin-no-bundle": "^3.0.0",
+    "vite-plugin-css-injected-by-js": "^3.3.1",
     "vite-plugin-svgr": "^4.2.0",
     "vite-tsconfig-paths": "^4.2.3"
   },

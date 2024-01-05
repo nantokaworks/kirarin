@@ -24,11 +24,11 @@ export interface Props {
 export function HeartYuraYura({
   posXPercents = [{ min: 0, max: 100 }],
   posYPercents = [
-    { min: 0, max: 10 },
+    { min: 10, max: 20 },
     { min: 90, max: 100 },
   ],
   sizePx = { min: 8, max: 12 },
-  frequencyMs = { min: 1600, max: 2400 },
+  frequencyMs = { min: 1000, max: 1600 },
   strong = true,
   first = 3,
   children,
