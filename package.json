@@ -28,6 +28,7 @@
   "scripts": {
     "build": "vite build && tsc -p tsconfig.build.json",
     "build:panda": "panda codegen --clean",
+    "build:docs": "typedoc",
     "format": "pnpm dlx sort-package-json && pnpm dlx sort-compiler-options && pnpm dlx sort-compiler-options -c tsconfig.build.json && pnpm dlx prettier --write './**/*.{ts,tsx}' 'tsconfig*.json'",
     "lint": "eslint ./src/*",
     "prepare": "panda codegen --clean",
@@ -36,14 +37,25 @@
   },
   "prettier": "@ichiql/prettier-config",
   "dependencies": {
-    "@ichiql/use-random-call": "^0.0.1"
+    "@ichiql/use-random-call": "^0.0.1",
+    "anoare": "^0.0.2",
+    "saikoro": "^0.0.3",
+    "use-prefers-reduced-motion": "^0.0.1",
+    "use-random-interval": "^0.0.5"
   },
   "devDependencies": {
     "@ichiql/prettier-config": "^0.1.1",
     "@ichiql/use-prefers-reduced-motion": "^0.0.2",
     "@pandacss/dev": "^0.23.0",
-    "@pandacss/preset-panda": "^0.23.0",
     "@pandacss/types": "^0.23.0",
+    "@storybook/addon-essentials": "^7.6.7",
+    "@storybook/addon-interactions": "^7.6.7",
+    "@storybook/addon-links": "^7.6.7",
+    "@storybook/addon-onboarding": "^1.0.10",
+    "@storybook/blocks": "^7.6.7",
+    "@storybook/react": "^7.6.7",
+    "@storybook/react-vite": "^7.6.7",
+    "@storybook/test": "^7.6.7",
     "@types/react": "^18.2.46",
     "@vitejs/plugin-react": "^4.2.1",
     "eslint": "^8.53.0",
@@ -52,10 +64,14 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rollup-plugin-visualizer": "^5.12.0",
+    "storybook": "^7.6.7",
     "storybook-dark-mode": "^3.0.3",
+    "typedoc": "^0.25.6",
     "typescript": "^5.0.4",
     "vite": "^4.3.9",
-    "vite-plugin-no-bundle": "^3.0.0"
+    "vite-plugin-no-bundle": "^3.0.0",
+    "vite-plugin-svgr": "^4.2.0",
+    "vite-tsconfig-paths": "^4.2.3"
   },
   "peerDependencies": {
     "react": "^18.2.0"

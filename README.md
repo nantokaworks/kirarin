@@ -2,7 +2,7 @@
 
 sparkle text and image :)
 
-## Usage
+## Setup
 
 ```sh
 pnpm add kirarin
@@ -10,9 +10,15 @@ yarn add kirarin
 npm i kirarin
 ```
 
+## Usage
+
 ```js
 import React from 'react'
-import { Kirarin } from 'kirarin'
+import { Kirarin, HeartYuraYura, HeartPowan } from 'kirarin'
 
-export default () => <Kirarin>きらきら</Kirarin>
+~~~
+
+<Kirarin>きらきら</Kirarin>
+<HeartYuraYura>ゆらゆら</HeartYuraYura>
+<HeartPowan>ぽわ〜ん</HeartPowan>
 ```
