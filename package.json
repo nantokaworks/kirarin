@@ -1,9 +1,10 @@
 {
   "name": "kirarin",
   "version": "0.0.3",
-  "description": "Kirarin Text & Image :)",
+  "description": "Kirarin Text & Image & etc... :)",
   "keywords": [
     "react",
+    "react-component",
     "sparkle",
     "kirarin",
     "text",
@@ -16,8 +17,6 @@
   "license": "MIT",
   "author": "Yamashita, Shinichi",
   "type": "module",
-  "main": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -25,10 +24,15 @@
     },
     "./package.json": "./package.json"
   },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "vite build && tsc -p tsconfig.build.json",
     "build:docs": "typedoc",
     "build:panda": "panda codegen --clean",
+    "dev:link": "pnpm link --global && cd node_modules/react && pnpm link --global && cd ../react-dom && pnpm link --global",
+    "dev:unlink": "pnpm unlink --global && cd node_modules/react && pnpm unlink --global && cd ../react-dom && pnpm unlink --global",
     "format": "pnpm dlx sort-package-json && pnpm dlx sort-compiler-options && pnpm dlx sort-compiler-options -c tsconfig.build.json && pnpm dlx prettier --write './**/*.{ts,tsx}' 'tsconfig*.json'",
     "lint": "eslint ./src/*",
     "prepare": "panda codegen --clean",
