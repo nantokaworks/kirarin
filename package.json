@@ -13,6 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/ichiql/kirarin.git"
   },
+  "license": "MIT",
   "author": "Yamashita, Shinichi",
   "exports": {
     ".": {
@@ -38,7 +39,6 @@
   "prettier": "@ichiql/prettier-config",
   "devDependencies": {
     "@ichiql/prettier-config": "^0.1.1",
-    "@ichiql/use-random-call": "^0.0.1",
     "@pandacss/dev": "^0.23.0",
     "@pandacss/types": "^0.23.0",
     "@storybook/addon-essentials": "^7.6.7",

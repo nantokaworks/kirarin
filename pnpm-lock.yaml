@@ -4,30 +4,10 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-dependencies:
-  '@ichiql/use-random-call':
-    specifier: ^0.0.1
-    version: 0.0.1(react-dom@18.2.0)(react@18.2.0)
-  anoare:
-    specifier: ^0.0.2
-    version: 0.0.2
-  saikoro:
-    specifier: ^0.0.3
-    version: 0.0.3
-  use-prefers-reduced-motion:
-    specifier: ^0.0.1
-    version: 0.0.1(react-dom@18.2.0)(react@18.2.0)
-  use-random-interval:
-    specifier: ^0.0.5
-    version: 0.0.5(react-dom@18.2.0)(react@18.2.0)(saikoro@0.0.3)
-
 devDependencies:
   '@ichiql/prettier-config':
     specifier: ^0.1.1
     version: 0.1.1(prettier@2.8.8)
-  '@ichiql/use-prefers-reduced-motion':
-    specifier: ^0.0.2
-    version: 0.0.2(react-dom@18.2.0)(react@18.2.0)
   '@pandacss/dev':
     specifier: ^0.23.0
     version: 0.23.0(typescript@5.3.3)
@@ -64,6 +44,9 @@ devDependencies:
   '@vitejs/plugin-react':
     specifier: ^4.2.1
     version: 4.2.1(vite@4.5.1)
+  anoare:
+    specifier: ^0.0.2
+    version: 0.0.2
   eslint:
     specifier: ^8.53.0
     version: 8.56.0
@@ -82,6 +65,9 @@ devDependencies:
   rollup-plugin-visualizer:
     specifier: ^5.12.0
     version: 5.12.0
+  saikoro:
+    specifier: ^0.0.3
+    version: 0.0.3
   storybook:
     specifier: ^7.6.7
     version: 7.6.7
@@ -94,6 +80,12 @@ devDependencies:
   typescript:
     specifier: ^5.0.4
     version: 5.3.3
+  use-prefers-reduced-motion:
+    specifier: ^0.0.1
+    version: 0.0.1(react-dom@18.2.0)(react@18.2.0)
+  use-random-interval:
+    specifier: ^0.0.5
+    version: 0.0.5(react-dom@18.2.0)(react@18.2.0)(saikoro@0.0.3)
   vite:
     specifier: ^4.3.9
     version: 4.5.1
@@ -1946,26 +1938,6 @@ packages:
     dependencies:
       prettier: 2.8.8
     dev: true
-
-  /@ichiql/use-prefers-reduced-motion@0.0.2(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-QowEW8nOrF04Q9aHaTk3rlP41dfDAZU/JKLbDFv0baeYvQfABSQbK+B7OqRRm2ozgqRVfi9PV1OeX9dkcGUM/A==}
-    peerDependencies:
-      react: '>= 18'
-      react-dom: '>= 18'
-    dependencies:
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-    dev: true
-
-  /@ichiql/use-random-call@0.0.1(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-pH12oUhUpGrGKTvaUABRzw5A/sbbZD9lotEZet7v+U9fpqVHFOaRKMZa85TK0LZyJC6Er2ObavGkM/LXpZH3pA==}
-    peerDependencies:
-      react: '>= 18'
-      react-dom: '>= 18'
-    dependencies:
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-    dev: false
 
   /@isaacs/cliui@8.0.2:
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
@@ -4316,7 +4288,7 @@ packages:
 
   /anoare@0.0.2:
     resolution: {integrity: sha512-BH5VwgpEXmXdijFn2Yrv3MIHOOoeaILnLh0wunte6W41E+qxt/xnh/RgwKVeClcsSWLOgam1gPoswax4/OVdcQ==}
-    dev: false
+    dev: true
 
   /ansi-colors@4.1.3:
     resolution: {integrity: sha512-/6w/C21Pm1A7aZitlI5Ni/2J6FFQN8i1Cvz3kHABAAbw93v/NlvKdVOqz7CCWz/3iv/JplRSEEZ83XION15ovw==}
@@ -6794,6 +6766,7 @@ packages:
 
   /js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
+    dev: true
 
   /js-yaml@3.14.1:
     resolution: {integrity: sha512-okMH7OXXJ7YrN9Ok3/SXrnu4iX9yOk+25nqX4imS2npuvTYDmo/QEZoqwZkYaIDk3jVvBOTOIEgEhaLOynBS9g==}
@@ -7016,6 +6989,7 @@ packages:
     hasBin: true
     dependencies:
       js-tokens: 4.0.0
+    dev: true
 
   /loupe@2.3.7:
     resolution: {integrity: sha512-zSMINGVYkdpYSOBmLi0D1Uo7JU9nVdQKrHxC8eYlV+9YKK9WePqAlL7lSlorG/U2Fw1w0hTBmaa/jrQ3UbPHtA==}
@@ -8068,6 +8042,7 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
+    dev: true
 
   /react-element-to-jsx-string@15.0.0(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-UDg4lXB6BzlobN60P8fHWVPX3Kyw8ORrTeBtClmIlGdkOOE+GYQSFvmEU5iLLpwp/6v42DINwNcwOhOLfQ//FQ==}
@@ -8156,6 +8131,7 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
+    dev: true
 
   /read-pkg-up@7.0.1:
     resolution: {integrity: sha512-zK0TB7Xd6JpCLmlLmufqykGE+/TlOePD6qKClNW7hHDKFh/J7/7gCWGR7joEQEW1bKq3a3yUZSObOoWLFQ4ohg==}
@@ -8410,12 +8386,13 @@ packages:
 
   /saikoro@0.0.3:
     resolution: {integrity: sha512-aR67ENPMIpl2TYLnh5uq1iIyWhMeyQcBKg2AYH8BsNgwtYNdbny5IgfXgwLsYTYhK1b9iZ52NL6YdFhEKnYNqw==}
-    dev: false
+    dev: true
 
   /scheduler@0.23.0:
     resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
     dependencies:
       loose-envify: 1.4.0
+    dev: true
 
   /semver@5.7.2:
     resolution: {integrity: sha512-cBznnQ9KjJqU67B52RMC65CMarK2600WFnbkcaiwWq3xy/5haFJlshgnpjovMVJ+Hff49d8GEn0b87C5pDQ10g==}
@@ -9236,7 +9213,7 @@ packages:
     dependencies:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-    dev: false
+    dev: true
 
   /use-random-interval@0.0.5(react-dom@18.2.0)(react@18.2.0)(saikoro@0.0.3):
     resolution: {integrity: sha512-J01KGuWLxRna50QYFc68u7MwGudkM2W4haYUFZIgMPz5/8r+tX93JZjrrsToyJqi7LcHywjSB68Vx1KrUQbOhQ==}
@@ -9248,7 +9225,7 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       saikoro: 0.0.3
-    dev: false
+    dev: true
 
   /use-resize-observer@9.1.0(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-R25VqO9Wb3asSD4eqtcxk8sJalvIOYBqS8MNZlpDSQ4l4xMQxC/J7Id9HoTqPq8FwULIn0PVW+OAqF2dyYbjow==}
