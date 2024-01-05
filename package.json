@@ -1,6 +1,6 @@
 {
   "name": "kirarin",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Kirarin Text & Image :)",
   "keywords": [
     "react",
@@ -15,16 +15,8 @@
   },
   "license": "MIT",
   "author": "Yamashita, Shinichi",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
-    },
-    "./package.json": "./package.json"
-  },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
+  "type": "module",
+  "main": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "vite build && tsc -p tsconfig.build.json",
@@ -71,7 +63,12 @@
     "vite-tsconfig-paths": "^4.2.3"
   },
   "peerDependencies": {
-    "react": "^18.2.0"
+    "anoare": "^0.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "saikoro": "^0.0.3",
+    "use-prefers-reduced-motion": "^0.0.1",
+    "use-random-interval": "^0.0.5"
   },
   "publishConfig": {
     "access": "public"

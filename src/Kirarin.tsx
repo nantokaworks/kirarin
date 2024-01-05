@@ -45,11 +45,13 @@ export function Kirarin({
   children,
   ...others
 }: Props) {
-  const [datas, setDatas] = useState(() => {
-    return range(first).map(() => generate({ colors, sizePx, posXPercents, posYPercents }))
-  })
-
   const notKirarin = usePrefersReducedMotion()
+
+  const [datas, setDatas] = useState(() => {
+    return notKirarin
+      ? []
+      : range(first).map(() => generate({ colors, sizePx, posXPercents, posYPercents }))
+  })
 
   useRandomInterval(
     () => {

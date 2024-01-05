@@ -1,15 +1,15 @@
 {
   "extends": "./tsconfig",
   "compilerOptions": {
-    "noFallthroughCasesInSwitch": true,
-    "noUnusedParameters": true,
-    "resolveJsonModule": true,
-    "rootDir": "./src",
+    "emitDeclarationOnly": true,
     "declaration": true,
     "declarationDir": "./dist",
-    "emitDeclarationOnly": true,
-    "allowImportingTsExtensions": true
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "rootDir": "./src"
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx"],
-  "exclude": ["src/**/*.test.ts"]
+  "include": ["src/**/*.ts", "src/**/*.tsx", "styled-system/**/*"],
+  "exclude": ["src/**/*.test.ts", "src/**/*.stories.tsx"]
 }
