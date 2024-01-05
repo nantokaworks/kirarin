@@ -2,6 +2,10 @@
 
 sparkle text and image :)
 
+## reference
+
+[here](https://ichiql.github.io/kirarin/)
+
 ## Setup
 
 ```sh
