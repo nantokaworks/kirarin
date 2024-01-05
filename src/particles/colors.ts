@@ -1,0 +1,5 @@
+export const COLORS_KIRA = ['#ffb900']
+export const COLORS_HEART = ['#e47777']
+export const COLORS_UNICORN = ['#ffffff', '#ffb3f8', '#cba3f6', '#a3a4f6', '#a3bef6']
+export const COLORS_RAINBOW = ['#8c3ed1', '#30a0f5', '#1ef361', '#ecfe0c', '#ffad65', '#fd63b0']
+export const COLORS_VIVID = ['#735cb0', '#00a4ef', '#6ab43e', '#e89d41', '#fd4084']
