@@ -1,4 +1,5 @@
 import react from '@vitejs/plugin-react'
+import peerDepsExternal from 'rollup-plugin-peer-deps-external'
 import { visualizer } from 'rollup-plugin-visualizer'
 import { defineConfig } from 'vite'
 import libCss from 'vite-plugin-libcss'
@@ -24,9 +25,10 @@ export default defineConfig({
     lib: {
       entry: ['src/index.ts'],
       formats: ['es'],
-      fileName: (format, entryName) => `${entryName}.${format === 'es' ? 'mjs' : 'cjs'}`,
+      fileName: (format, entryName) => `${entryName}.mjs`,
     },
     rollupOptions: {
+      plugins: [peerDepsExternal() as Plugin],
       external: [
         'react',
         'react-dom',

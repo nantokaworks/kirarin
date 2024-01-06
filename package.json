@@ -1,6 +1,6 @@
 {
   "name": "kirarin",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Kirarin Text & Image & etc... :)",
   "keywords": [
     "react",
@@ -54,6 +54,7 @@
     "@storybook/react-vite": "^7.6.7",
     "@storybook/test": "^7.6.7",
     "@types/react": "^18.2.46",
+    "@types/rollup-plugin-peer-deps-external": "^2.2.4",
     "@vitejs/plugin-react": "^4.2.1",
     "anoare": "^0.0.2",
     "eslint": "^8.53.0",
@@ -63,13 +64,14 @@
     "prettier-config-nantokaworks": "^0.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-visualizer": "^5.12.0",
     "saikoro": "^0.0.3",
     "storybook": "^7.6.7",
     "storybook-dark-mode": "^3.0.3",
     "typedoc": "^0.25.6",
     "typescript": "^5.0.4",
-    "usefoobar": "^0.0.1",
+    "usefoobar": "^0.0.2",
     "vite": "^4.3.9",
     "vite-plugin-css-injected-by-js": "^3.3.1",
     "vite-plugin-libcss": "^1.1.1",
@@ -81,7 +83,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "saikoro": "^0.0.3",
-    "usefoobar": "^0.0.1"
+    "usefoobar": "^0.0.2"
   },
   "publishConfig": {
     "access": "public"

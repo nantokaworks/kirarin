@@ -38,6 +38,9 @@ devDependencies:
   '@types/react':
     specifier: ^18.2.46
     version: 18.2.46
+  '@types/rollup-plugin-peer-deps-external':
+    specifier: ^2.2.4
+    version: 2.2.4
   '@vitejs/plugin-react':
     specifier: ^4.2.1
     version: 4.2.1(vite@4.5.1)
@@ -65,6 +68,9 @@ devDependencies:
   react-dom:
     specifier: ^18.2.0
     version: 18.2.0(react@18.2.0)
+  rollup-plugin-peer-deps-external:
+    specifier: ^2.2.4
+    version: 2.2.4(rollup@3.29.4)
   rollup-plugin-visualizer:
     specifier: ^5.12.0
     version: 5.12.0(rollup@3.29.4)
@@ -84,8 +90,8 @@ devDependencies:
     specifier: ^5.0.4
     version: 5.3.3
   usefoobar:
-    specifier: ^0.0.1
-    version: 0.0.1(react-dom@18.2.0)(react@18.2.0)(rollup@3.29.4)(saikoro@0.0.3)
+    specifier: ^0.0.2
+    version: 0.0.2(react-dom@18.2.0)(react@18.2.0)(rollup@3.29.4)(saikoro@0.0.3)
   vite:
     specifier: ^4.3.9
     version: 4.5.1
@@ -3901,6 +3907,10 @@ packages:
     resolution: {integrity: sha512-AjwI4MvWx3HAOaZqYsjKWyEObT9lcVV0Y0V8nXo6cXzN8ZiMxVhf6F3d/UNvXVGKrEzL/Dluc5p+y9GkzlTWig==}
     dev: true
 
+  /@types/estree@0.0.39:
+    resolution: {integrity: sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw==}
+    dev: true
+
   /@types/estree@0.0.51:
     resolution: {integrity: sha512-CuPgU6f3eT/XgKKPqKd/gLZV1Xmvf1a2R5POBOGQa6uv82xpls89HU5zKeVoyR8XzHd1RGNOlQlvUe3CFkjWNQ==}
     dev: true
@@ -4045,6 +4055,13 @@ packages:
 
   /@types/resolve@1.20.6:
     resolution: {integrity: sha512-A4STmOXPhMUtHH+S6ymgE2GiBSMqf4oTvcQZMcHzokuTLVYzXTB8ttjcgxOVaAp2lGwEdzZ0J+cRbbeevQj1UQ==}
+    dev: true
+
+  /@types/rollup-plugin-peer-deps-external@2.2.4:
+    resolution: {integrity: sha512-UbIYkFpYjWruIOyzOoatwtzjs/gbyT+2ndBmuKExNSncbJChYLDWxjUsrgaOGo2EyGB3u2/b8V/8wmQ1dgcGrQ==}
+    dependencies:
+      '@types/node': 20.10.6
+      rollup: 0.63.5
     dev: true
 
   /@types/scheduler@0.16.8:
@@ -8462,6 +8479,14 @@ packages:
       yargs: 17.7.2
     dev: true
 
+  /rollup@0.63.5:
+    resolution: {integrity: sha512-dFf8LpUNzIj3oE0vCvobX6rqOzHzLBoblyFp+3znPbjiSmSvOoK2kMKx+Fv9jYduG1rvcCfCveSgEaQHjWRF6g==}
+    hasBin: true
+    dependencies:
+      '@types/estree': 0.0.39
+      '@types/node': 20.10.6
+    dev: true
+
   /rollup@3.29.4:
     resolution: {integrity: sha512-oWzmBZwvYrU0iJHtDmhsm662rC15FRXmcjCk1xD771dFDx5jJ02ufAQQTn0etB2emNk4J9EZg/yWKpsn9BWGRw==}
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
@@ -9379,8 +9404,8 @@ packages:
       tslib: 2.6.2
     dev: true
 
-  /usefoobar@0.0.1(react-dom@18.2.0)(react@18.2.0)(rollup@3.29.4)(saikoro@0.0.3):
-    resolution: {integrity: sha512-Y9Pf+hDzHytr06619iu6kmokQoAXUuVHxZNr/lyxngTbbRr8TBTDEbems7UuB8Ex3tMRYVzoC9Wozy5knlwnYw==}
+  /usefoobar@0.0.2(react-dom@18.2.0)(react@18.2.0)(rollup@3.29.4)(saikoro@0.0.3):
+    resolution: {integrity: sha512-BVwSsBDFajbcdw0S1HbFMkL3WiwFkRoo2bdEs4Z+O4+YtzuzAXDvzTTOpBW0Mv5kqHUK5X0zaXrnoLnS5APsJg==}
     peerDependencies:
       react: '>= 18'
       react-dom: '>= 18'
