@@ -29,27 +29,6 @@ export default defineConfig({
     },
     rollupOptions: {
       plugins: [peerDepsExternal() as Plugin],
-      external: [
-        'react',
-        'react-dom',
-        'react/jsx-runtime',
-        'anoare',
-        'saikoro',
-        'use-prefers-reduced-motion',
-        'use-random-interval',
-      ],
-      output: {
-        exports: 'named',
-        globals: {
-          react: 'react',
-          'react-dom': 'react-dom',
-          'react/jsx-runtime': 'react/jsx-runtime',
-          anoare: 'anoare',
-          saikoro: 'saikoro',
-          'use-prefers-reduced-motion': 'use-prefers-reduced-motion',
-          'use-random-interval': 'use-random-interval',
-        },
-      },
     },
   },
 })
