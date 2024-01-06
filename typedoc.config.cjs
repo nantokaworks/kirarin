@@ -24,9 +24,9 @@ module.exports = {
     Classes: 1.5,
   },
   navigationLinks: {
-    GitHub: 'https://github.com/ichiql/kirarin',
+    GitHub: 'https://github.com/nantokaworks/kirarin',
   },
   sidebarLinks: {
-    Web: 'https://kirarin.ichiql.dev',
+    Web: 'https://kirarin.nantoka.works',
   },
 }

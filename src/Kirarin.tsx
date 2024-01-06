@@ -1,8 +1,7 @@
 import { range } from 'anoare'
 import { useState } from 'react'
 import { css, cx } from 'styled-system/css'
-import { usePrefersReducedMotion } from 'use-prefers-reduced-motion'
-import { useRandomInterval } from 'use-random-interval'
+import { usePrefersReducedMotion, useRandomInterval } from 'usefoobar'
 import { SpanWrapper, StrongWrapper } from '~/Wrapper'
 import { generate } from '~/generate'
 import { AnimationType, COLORS_KIRA, Particle, Pika, lifetimes } from '~/particles'
@@ -47,7 +46,7 @@ export function Kirarin({
   className,
   ...others
 }: Props & React.HTMLAttributes<HTMLSpanElement>) {
-  const notKirarin = usePrefersReducedMotion()
+  const notKirarin = usePrefersReducedMotion() || true
 
   const [datas, setDatas] = useState(() => {
     return notKirarin

@@ -24,5 +24,5 @@
     "target": "ESNext",
     "skipLibCheck": true
   },
-  "include": ["vite.config.ts", "**/*.ts", "**/*.tsx", "**/*.svg?react"]
+  "include": ["vite.config.ts", "src", "styled-system", ".storybook"]
 }

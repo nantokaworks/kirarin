@@ -2,7 +2,7 @@ import { Preview } from '@storybook/react'
 import React from 'react'
 import { useDarkMode } from 'storybook-dark-mode'
 import { css, cx } from 'styled-system/css'
-import '../src/index.css'
+import 'styled-system/styles.css'
 
 const preview: Preview = {
   parameters: {

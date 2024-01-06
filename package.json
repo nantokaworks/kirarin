@@ -1,6 +1,6 @@
 {
   "name": "kirarin",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Kirarin Text & Image & etc... :)",
   "keywords": [
     "react",
@@ -12,7 +12,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ichiql/kirarin.git"
+    "url": "git+https://github.com/nantokaworks/kirarin.git"
   },
   "license": "MIT",
   "author": "Yamashita, Shinichi",
@@ -28,20 +28,21 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "vite build && tsc -p tsconfig.build.json",
+    "build": "pnpm build:panda && vite build && tsc -p tsconfig.build.json",
     "build:docs": "typedoc",
-    "build:panda": "panda codegen --clean",
+    "build:panda": "panda codegen --clean && pandacss",
     "dev:link": "pnpm link --global && cd node_modules/react && pnpm link --global && cd ../react-dom && pnpm link --global",
     "dev:unlink": "pnpm unlink --global && cd node_modules/react && pnpm unlink --global && cd ../react-dom && pnpm unlink --global",
+    "dev:panda": "pandacss --watch",
+    "dev:storybook": "storybook dev -p 6006",
     "format": "pnpm dlx sort-package-json && pnpm dlx sort-compiler-options && pnpm dlx sort-compiler-options -c tsconfig.build.json && pnpm dlx prettier --write './**/*.{ts,tsx}' 'tsconfig*.json'",
     "lint": "eslint ./src/*",
     "prepare": "panda codegen --clean",
     "prepublish": "pnpm build",
-    "storybook": "storybook dev -p 6006"
+    "storybook": "run-p build:panda dev:panda dev:storybook"
   },
-  "prettier": "@ichiql/prettier-config",
+  "prettier": "prettier-config-nantokaworks",
   "devDependencies": {
-    "@ichiql/prettier-config": "^0.1.1",
     "@pandacss/dev": "^0.23.0",
     "@pandacss/types": "^0.23.0",
     "@storybook/addon-essentials": "^7.6.7",
@@ -58,6 +59,8 @@
     "eslint": "^8.53.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-import": "^2.29.0",
+    "npm-run-all": "^4.1.5",
+    "prettier-config-nantokaworks": "^0.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rollup-plugin-visualizer": "^5.12.0",
@@ -66,10 +69,10 @@
     "storybook-dark-mode": "^3.0.3",
     "typedoc": "^0.25.6",
     "typescript": "^5.0.4",
-    "use-prefers-reduced-motion": "^0.0.1",
-    "use-random-interval": "^0.0.5",
+    "usefoobar": "^0.0.1",
     "vite": "^4.3.9",
     "vite-plugin-css-injected-by-js": "^3.3.1",
+    "vite-plugin-libcss": "^1.1.1",
     "vite-plugin-svgr": "^4.2.0",
     "vite-tsconfig-paths": "^4.2.3"
   },
@@ -78,8 +81,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "saikoro": "^0.0.3",
-    "use-prefers-reduced-motion": "^0.0.1",
-    "use-random-interval": "^0.0.5"
+    "usefoobar": "^0.0.1"
   },
   "publishConfig": {
     "access": "public"

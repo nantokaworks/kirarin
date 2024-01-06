@@ -1,7 +1,7 @@
 import react from '@vitejs/plugin-react'
 import { visualizer } from 'rollup-plugin-visualizer'
 import { defineConfig } from 'vite'
-import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js'
+import libCss from 'vite-plugin-libcss'
 import svgr from 'vite-plugin-svgr'
 import tsconfigPaths from 'vite-tsconfig-paths'
 
@@ -9,8 +9,8 @@ export default defineConfig({
   plugins: [
     tsconfigPaths(),
     react(),
+    libCss(),
     svgr(),
-    cssInjectedByJsPlugin(),
     visualizer({
       emitFile: true,
       filename: 'stats.html',

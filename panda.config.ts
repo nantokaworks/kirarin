@@ -1,16 +1,11 @@
 import { defineConfig } from '@pandacss/dev'
 
 export default defineConfig({
-  outExtension: 'js',
   preflight: true,
-  include: [
-    './src/**/*.{ts,tsx,js,jsx}',
-    './stories/**/*.{js,jsx,ts,tsx}',
-    './.storybook/**/*.{js,jsx,ts,tsx}',
-  ],
+  emitPackage: true,
+  include: ['./src/**/*.{ts,tsx,js,jsx}', './.storybook/**/*.{js,jsx,ts,tsx}'],
   exclude: [],
   outdir: 'styled-system',
-  emitPackage: false,
   theme: {
     extend: {
       keyframes: {
