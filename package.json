@@ -1,6 +1,6 @@
 {
   "name": "kirarin",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Kirarin Text & Image & etc... :)",
   "keywords": [
     "react",
@@ -74,7 +74,6 @@
     "usefoobar": "^0.0.2",
     "vite": "^4.3.9",
     "vite-plugin-css-injected-by-js": "^3.3.1",
-    "vite-plugin-libcss": "^1.1.1",
     "vite-plugin-svgr": "^4.2.0",
     "vite-tsconfig-paths": "^4.2.3"
   },

@@ -98,9 +98,6 @@ devDependencies:
   vite-plugin-css-injected-by-js:
     specifier: ^3.3.1
     version: 3.3.1(vite@4.5.1)
-  vite-plugin-libcss:
-    specifier: ^1.1.1
-    version: 1.1.1(vite@4.5.1)
   vite-plugin-svgr:
     specifier: ^4.2.0
     version: 4.2.0(rollup@3.29.4)(typescript@5.3.3)(vite@4.5.1)
@@ -9460,15 +9457,6 @@ packages:
     peerDependencies:
       vite: '>2.0.0-0'
     dependencies:
-      vite: 4.5.1
-    dev: true
-
-  /vite-plugin-libcss@1.1.1(vite@4.5.1):
-    resolution: {integrity: sha512-WAk6U9iYWMbcu7cdw4wACpVebZiLHMyyE9KTcBzzkTt1cnXj3a7loIoIGNblx+xMb9quPpO3iRbNTOnIFDzgmg==}
-    peerDependencies:
-      vite: '*'
-    dependencies:
-      minimatch: 9.0.3
       vite: 4.5.1
     dev: true
 
