@@ -9,7 +9,7 @@ export const lifetimes = {
 export type AnimationType = keyof typeof lifetimes
 
 export const particle = cva({
-  base: { position: 'absolute', display: 'block' },
+  base: { position: 'absolute', display: 'block', pointerEvents: 'none' },
   variants: {
     type: {
       kirakira: { animation: 'comeInOut 900ms forwards' },
