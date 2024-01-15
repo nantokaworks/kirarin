@@ -1,6 +1,6 @@
 {
   "name": "kirarin",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Kirarin Text & Image & etc... :)",
   "keywords": [
     "react",
@@ -22,13 +22,20 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs"
     },
+    "./styles.css": {
+      "import": "./dist/styles.css",
+      "require": "./dist/styles.css"
+    },
     "./package.json": "./package.json"
   },
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "pnpm build:panda && vite build && tsc -p tsconfig.build.json",
+    "build": "rimraf ./dist && pnpm build:panda && vite build && tsc -p tsconfig.build.json",
     "build:docs": "typedoc",
     "build:panda": "panda codegen --clean && pandacss",
     "dev:link": "pnpm link --global && cd node_modules/react && pnpm link --global && cd ../react-dom && pnpm link --global",
@@ -64,6 +71,7 @@
     "prettier-config-nantokaworks": "^0.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "rimraf": "^5.0.5",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-visualizer": "^5.12.0",
     "saikoro": "^0.0.3",

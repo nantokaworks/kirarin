@@ -18,6 +18,7 @@ npm i kirarin
 
 ```js
 import React from 'react'
+import 'kirarin/styles.css'
 import { Kirarin, HeartYuraYura, HeartPowan } from 'kirarin'
 
 ~~~
