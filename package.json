@@ -1,6 +1,6 @@
 {
   "name": "kirarin",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Kirarin Text & Image & etc... :)",
   "keywords": [
     "react",
@@ -22,9 +22,9 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs"
     },
-    "./styles.css": {
-      "import": "./dist/styles.css",
-      "require": "./dist/styles.css"
+    "./style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
     },
     "./package.json": "./package.json"
   },
