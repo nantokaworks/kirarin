@@ -1,4 +1,4 @@
-import { css } from 'styled-system/css'
+import { css } from '@kirarin/styled-system/css'
 
 export function StrongWrapper({ children }: { children: React.ReactNode }) {
   return (

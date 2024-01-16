@@ -1,6 +1,6 @@
+import { css, cx } from '@kirarin/styled-system/css'
 import { range } from 'anoare'
 import { useState } from 'react'
-import { css, cx } from 'styled-system/css'
 import { useIsClient, usePrefersReducedMotion, useRandomInterval } from 'usefoobar'
 import { SpanWrapper, StrongWrapper } from '~/Wrapper'
 import { generate } from '~/generate'

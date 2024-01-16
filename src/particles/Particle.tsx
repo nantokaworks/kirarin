@@ -1,4 +1,4 @@
-import { cx } from 'styled-system/css'
+import { cx } from '@kirarin/styled-system/css'
 import { AnimationType, particle, particleInner } from '~/particles'
 
 interface Props {

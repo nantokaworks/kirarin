@@ -2,9 +2,11 @@ import { defineConfig } from '@pandacss/dev'
 
 export default defineConfig({
   preflight: true,
+  emitPackage: true,
+  prefix: 'krrn',
+  outdir: '@kirarin/styled-system',
   include: ['./src/**/*.{ts,tsx,js,jsx}', './.storybook/**/*.{js,jsx,ts,tsx}'],
   exclude: [],
-  outdir: 'styled-system',
   theme: {
     extend: {
       keyframes: {
