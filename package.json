@@ -1,6 +1,6 @@
 {
   "name": "kirarin",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "Kirarin Text & Image & etc... :)",
   "keywords": [
     "react",
@@ -37,7 +37,7 @@
     "buildx": "rimraf ./dist && pnpm build:panda && vite build && tsc -p tsconfig.build.json",
     "build:docs": "typedoc",
     "build:panda": "panda codegen --clean",
-    "build:panda:static": "panda cssgen --minify --outfile dist/styles.css",
+    "build:panda:static": "panda cssgen --minify --outfile dist/style.css",
     "dev:link": "pnpm link --global && cd node_modules/react && pnpm link --global && cd ../react-dom && pnpm link --global",
     "dev:unlink": "pnpm unlink --global && cd node_modules/react && pnpm unlink --global && cd ../react-dom && pnpm unlink --global",
     "dev:panda": "pandacss --watch",
