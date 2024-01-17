@@ -1,6 +1,6 @@
 {
   "name": "kirarin",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "Kirarin Text & Image & etc... :)",
   "keywords": [
     "react",
@@ -35,9 +35,12 @@
     "dist"
   ],
   "scripts": {
-    "build": "rimraf ./dist && pnpm build:panda && vite build && tsc -p tsconfig.build.json",
+    "build": "run-s build:panda build:main build:panda:static",
+    "build:main": "tsup",
+    "buildx": "rimraf ./dist && pnpm build:panda && vite build && tsc -p tsconfig.build.json",
     "build:docs": "typedoc",
-    "build:panda": "panda codegen --clean && pandacss",
+    "build:panda": "panda codegen --clean",
+    "build:panda:static": "panda cssgen --minify --outfile dist/styles.css",
     "dev:link": "pnpm link --global && cd node_modules/react && pnpm link --global && cd ../react-dom && pnpm link --global",
     "dev:unlink": "pnpm unlink --global && cd node_modules/react && pnpm unlink --global && cd ../react-dom && pnpm unlink --global",
     "dev:panda": "pandacss --watch",
@@ -77,12 +80,11 @@
     "saikoro": "^0.0.3",
     "storybook": "^7.6.7",
     "storybook-dark-mode": "^3.0.3",
+    "tsup": "^8.0.1",
     "typedoc": "^0.25.6",
     "typescript": "^5.0.4",
     "usefoobar": "^0.0.2",
     "vite": "^4.3.9",
-    "vite-plugin-css-injected-by-js": "^3.3.1",
-    "vite-plugin-svgr": "^4.2.0",
     "vite-tsconfig-paths": "^4.2.3"
   },
   "peerDependencies": {

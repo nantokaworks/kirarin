@@ -1,4 +1,4 @@
-import { cva } from '@kirarin/styled-system/css'
+import { cva } from 'styled-system/css'
 
 export const lifetimes = {
   kirakira: 900,

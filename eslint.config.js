@@ -3,7 +3,7 @@ export default {
     '**/dist/',
     '**/node_modules/',
     '.eslintrc.cjs',
-    'vite.config.ts',
+    'tsup.config.ts',
     'jest.config.js',
   ],
   env: { node: true },

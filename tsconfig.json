@@ -8,9 +8,10 @@
     "strictNullChecks": true,
     "module": "ESNext",
     "moduleResolution": "bundler",
+    "baseUrl": ".",
     "paths": {
-      "styled-system/*": ["./styled-system/*"],
-      "~/*": ["./src/*"]
+      "~/*": ["src/*"],
+      "styled-system/*": ["styled-system/*"]
     },
     "rootDir": ".",
     "outDir": "./dist",
@@ -24,5 +25,5 @@
     "target": "ESNext",
     "skipLibCheck": true
   },
-  "include": ["vite.config.ts", "src", "styled-system", ".storybook"]
+  "include": ["tsup.config.ts", "src", "styled-system", ".storybook"]
 }

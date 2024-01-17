@@ -1,4 +1,3 @@
-import '@kirarin/styled-system/styles.css'
 import { Kirarin } from './Kirarin'
 export { HeartPowan } from './HeartPowan'
 export { HeartYuraYura } from './HeartYuraYura'
