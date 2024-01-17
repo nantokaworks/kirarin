@@ -10,8 +10,7 @@
     "moduleResolution": "bundler",
     "baseUrl": ".",
     "paths": {
-      "~/*": ["src/*"],
-      "styled-system/*": ["styled-system/*"]
+      "~/*": ["src/*"]
     },
     "rootDir": ".",
     "outDir": "./dist",
