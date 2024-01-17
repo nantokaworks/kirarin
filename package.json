@@ -1,6 +1,6 @@
 {
   "name": "kirarin",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "Kirarin Text & Image & etc... :)",
   "keywords": [
     "react",
@@ -61,8 +61,6 @@
     "@storybook/react-vite": "^7.6.7",
     "@storybook/test": "^7.6.7",
     "@types/react": "^18.2.46",
-    "@types/rollup-plugin-peer-deps-external": "^2.2.4",
-    "@vitejs/plugin-react": "^4.2.1",
     "anoare": "^0.0.2",
     "eslint": "^8.53.0",
     "eslint-config-prettier": "^9.0.0",
@@ -72,17 +70,13 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rimraf": "^5.0.5",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-visualizer": "^5.12.0",
     "saikoro": "^0.0.3",
     "storybook": "^7.6.7",
     "storybook-dark-mode": "^3.0.3",
     "tsup": "^8.0.1",
     "typedoc": "^0.25.6",
     "typescript": "^5.0.4",
-    "usefoobar": "^0.0.2",
-    "vite": "^4.3.9",
-    "vite-tsconfig-paths": "^4.2.3"
+    "usefoobar": "^0.0.2"
   },
   "peerDependencies": {
     "anoare": "^0.0.2",

@@ -1,5 +1,3 @@
-import jsx from '@svgr/plugin-jsx'
-import svgr from 'esbuild-plugin-svgr'
 import { defineConfig } from 'tsup'
 
 export default defineConfig({
@@ -9,9 +7,9 @@ export default defineConfig({
       js: `.mjs`,
     }
   },
+  minify: true,
   target: 'esnext',
   format: ['esm'],
   clean: true,
   dts: true,
-  esbuildPlugins: [svgr({ svgo: false, plugins: [jsx] })],
 })
