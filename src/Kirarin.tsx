@@ -20,6 +20,7 @@ export interface Props {
   frequencyMs?: { min: number; max: number }
   first?: number
   strong?: boolean
+  disabled?: boolean
   className?: string
 }
 
@@ -41,13 +42,14 @@ export function Kirarin({
   posYPercents = [{ min: 0, max: 100 }],
   frequencyMs = { min: 50, max: 450 },
   strong = true,
+  disabled = false,
   first = 3,
   children,
   className,
   ...others
 }: Props & React.HTMLAttributes<HTMLSpanElement>) {
   const isClient = useIsClient()
-  const notKirarin = usePrefersReducedMotion() || !isClient
+  const notKirarin = usePrefersReducedMotion() || !isClient || disabled
 
   const [datas, setDatas] = useState(() => {
     return notKirarin
