@@ -1,5 +1,4 @@
-import { cx } from 'styled-system/css'
-import { AnimationType, particle, particleInner } from '~/particles'
+import { AnimationType, getParticleClassName, getParticleInnerClassName } from '~/styles/inject'
 
 interface Props {
   size: number
@@ -22,11 +21,11 @@ export const Particle = ({
 }: Props) => {
   return (
     <span
-      className={cx(particle({ type: animation }), className)}
+      className={`${getParticleClassName(animation)} ${className || ''}`}
       style={style}
     >
       <span
-        className={particleInner({ type: animation, reverse })}
+        className={getParticleInnerClassName(animation, reverse)}
         style={{ width: size, height: size, fill: color }}
       >
         {children}

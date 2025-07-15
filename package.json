@@ -1,6 +1,6 @@
 {
   "name": "kirarin",
-  "version": "0.0.16",
+  "version": "0.0.20",
   "description": "Kirarin Text & Image & etc... :)",
   "keywords": [
     "react",
@@ -15,14 +15,13 @@
     "url": "git+https://github.com/nantokaworks/kirarin.git"
   },
   "license": "MIT",
-  "author": "Yamashita, Shinichi",
+  "author": "Shinichi Yamashita",
   "type": "module",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs"
     },
-    "./style.css": "./dist/style.css",
     "./package.json": "./package.json"
   },
   "main": "./dist/index.mjs",
@@ -32,26 +31,18 @@
     "dist"
   ],
   "scripts": {
-    "build": "run-s build:panda build:main build:panda:static",
-    "build:main": "tsup",
-    "buildx": "rimraf ./dist && pnpm build:panda && vite build && tsc -p tsconfig.build.json",
+    "build": "tsup",
     "build:docs": "typedoc",
-    "build:panda": "panda codegen --clean",
-    "build:panda:static": "panda cssgen --minify --outfile dist/style.css",
     "dev:link": "pnpm link --global && cd node_modules/react && pnpm link --global && cd ../react-dom && pnpm link --global",
     "dev:unlink": "pnpm unlink --global && cd node_modules/react && pnpm unlink --global && cd ../react-dom && pnpm unlink --global",
-    "dev:panda": "pandacss --watch",
     "dev:storybook": "storybook dev -p 6006",
     "format": "pnpm dlx sort-package-json && pnpm dlx sort-compiler-options && pnpm dlx sort-compiler-options -c tsconfig.build.json && pnpm dlx prettier --write './**/*.{ts,tsx}' 'tsconfig*.json'",
     "lint": "eslint ./src/*",
-    "prepare": "panda codegen --clean",
     "prepublish": "pnpm build",
-    "storybook": "run-p build:panda dev:panda dev:storybook"
+    "storybook": "storybook dev -p 6006"
   },
   "prettier": "prettier-config-nantokaworks",
   "devDependencies": {
-    "@pandacss/dev": "^0.23.0",
-    "@pandacss/types": "^0.23.0",
     "@storybook/addon-essentials": "^7.6.7",
     "@storybook/addon-interactions": "^7.6.7",
     "@storybook/addon-links": "^7.6.7",

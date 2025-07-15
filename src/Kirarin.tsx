@@ -1,10 +1,10 @@
 import { range } from 'anoare'
-import { useState } from 'react'
-import { css, cx } from 'styled-system/css'
+import { useEffect, useState } from 'react'
 import { useIsClient, usePrefersReducedMotion, useRandomInterval } from 'usefoobar'
 import { SpanWrapper, StrongWrapper } from '~/Wrapper'
 import { generate } from '~/generate'
-import { AnimationType, COLORS_KIRA, Particle, Pika, lifetimes } from '~/particles'
+import { AnimationType, COLORS_KIRA, Particle, Pika } from '~/particles'
+import { injectStyles, lifetimes } from '~/styles/inject'
 
 /**
  * Kirarin Props
@@ -22,6 +22,7 @@ export interface Props {
   strong?: boolean
   disabled?: boolean
   className?: string
+  disableStyleInjection?: boolean
 }
 
 /**
@@ -46,10 +47,17 @@ export function Kirarin({
   first = 3,
   children,
   className,
+  disableStyleInjection = false,
   ...others
 }: Props & React.HTMLAttributes<HTMLSpanElement>) {
   const isClient = useIsClient()
   const notKirarin = usePrefersReducedMotion() || !isClient || disabled
+
+  useEffect(() => {
+    if (!disableStyleInjection) {
+      injectStyles()
+    }
+  }, [disableStyleInjection])
 
   const [datas, setDatas] = useState(() => {
     return notKirarin
@@ -78,10 +86,7 @@ export function Kirarin({
 
   return (
     <span
-      className={cx(
-        css({ display: 'inline-block', position: 'relative', w: 'fit-content' }),
-        className
-      )}
+      className={`krrn-wrapper ${className || ''}`}
       {...others}
     >
       {datas.map((p) => (

@@ -12,4 +12,5 @@ export default defineConfig({
   format: ['esm'],
   clean: true,
   dts: true,
+  external: ['react', 'react-dom'],
 })
