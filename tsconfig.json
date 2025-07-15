@@ -22,7 +22,8 @@
     "jsx": "react-jsx",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "target": "ESNext",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "types": []
   },
-  "include": ["tsup.config.ts", "src", "styled-system", ".storybook"]
+  "include": ["tsup.config.ts", "src", ".storybook"]
 }

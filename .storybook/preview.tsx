@@ -1,8 +1,6 @@
 import { Preview } from '@storybook/react'
 import React from 'react'
 import { useDarkMode } from 'storybook-dark-mode'
-import { css, cx } from 'styled-system/css'
-import 'styled-system/styles.css'
 
 const preview: Preview = {
   parameters: {
@@ -23,16 +21,12 @@ const preview: Preview = {
       return (
         <div data-color-mode={isDark ? 'dark' : 'light'}>
           <div
-            className={cx(
-              css({
-                backgroundColor: { base: 'mj.background.50', _dark: 'mj.background.800' },
-                color: { base: 'mj.foreground.900', _dark: 'mj.foreground.100' },
-              }),
-              css({
-                p: '1rem',
-                minH: ctx.viewMode !== 'docs' ? '100vh' : 'auto',
-              })
-            )}
+            style={{
+              backgroundColor: isDark ? '#1a1a1a' : '#f5f5f5',
+              color: isDark ? '#e5e5e5' : '#1a1a1a',
+              padding: '1rem',
+              minHeight: ctx.viewMode !== 'docs' ? '100vh' : 'auto',
+            }}
           >
             <Story />
           </div>

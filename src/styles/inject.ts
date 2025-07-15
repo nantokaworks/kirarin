@@ -20,6 +20,13 @@ const getStyles = () => `
   
   .krrn-particle-inner {
     display: block;
+    transform-origin: 50% 50%;
+  }
+  
+  .krrn-particle-inner svg {
+    display: block;
+    width: 100%;
+    height: 100%;
   }
   
   .krrn-wrapper {
@@ -46,56 +53,48 @@ const getStyles = () => `
   
   @keyframes krrn-spin {
     0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    100% { transform: rotate(180deg); }
   }
   
   @keyframes krrn-yurayura {
-    0%, 100% { transform: translateX(0) rotate(0deg); }
-    25% { transform: translateX(-3px) rotate(-2deg); }
-    75% { transform: translateX(3px) rotate(2deg); }
+    0%, 100% { transform: rotate(15deg); }
+    50% { transform: rotate(-15deg); }
   }
   
   @keyframes krrn-powanFly {
-    0% {
-      transform: translate(0, 0) scale(0);
-      opacity: 1;
+    0% { 
+      transform: translate3d(0, 0, 0);
     }
-    10% {
-      transform: translate(0, -5px) scale(1);
-      opacity: 1;
-    }
-    90% {
-      transform: translate(0, -30px) scale(1.2);
-      opacity: 1;
-    }
-    100% {
-      transform: translate(0, -40px) scale(1.5);
-      opacity: 0;
+    100% { 
+      transform: translate3d(0, -0.6rem, 0);
     }
   }
   
   @keyframes krrn-powanScale {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.3); }
-    100% { transform: scale(1.6); }
+    0% { 
+      transform: scale(0); 
+      opacity: 0;
+    }
+    10% { 
+      transform: scale(1); 
+      opacity: 1;
+    }
+    90% { 
+      transform: scale(1); 
+      opacity: 1;
+    }
+    100% { 
+      transform: scale(0); 
+      opacity: 0;
+    }
   }
   
   @keyframes krrn-baloon {
-    0% {
-      transform: translate(0, 0) scale(0);
-      opacity: 1;
+    0%, 100% {
+      transform: rotate(20deg);
     }
-    20% {
-      transform: translate(0, -10px) scale(1);
-      opacity: 1;
-    }
-    80% {
-      transform: translate(0, -50px) scale(1.1);
-      opacity: 0.8;
-    }
-    100% {
-      transform: translate(0, -80px) scale(1.2);
-      opacity: 0;
+    50% {
+      transform: rotate(-20deg);
     }
   }
   

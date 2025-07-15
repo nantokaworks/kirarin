@@ -13,4 +13,5 @@ export default defineConfig({
   clean: true,
   dts: true,
   external: ['react', 'react-dom'],
+  noExternal: ['anoare', 'saikoro', 'usefoobar'],
 })

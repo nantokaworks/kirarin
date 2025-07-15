@@ -33,6 +33,7 @@
   "scripts": {
     "build": "tsup",
     "build:docs": "typedoc",
+    "dev": "tsup --watch",
     "dev:link": "bun link --global && cd node_modules/react && bun link --global && cd ../react-dom && bun link --global",
     "dev:unlink": "bun unlink --global && cd node_modules/react && bun unlink --global && cd ../react-dom && bun unlink --global",
     "dev:storybook": "storybook dev -p 6006",
@@ -67,7 +68,8 @@
     "tsup": "^8.0.1",
     "typedoc": "^0.25.6",
     "typescript": "^5.0.4",
-    "usefoobar": "^0.0.2"
+    "usefoobar": "^0.0.2",
+    "vite-tsconfig-paths": "^5.1.4"
   },
   "peerDependencies": {
     "anoare": "^0.0.2",
