@@ -33,12 +33,12 @@
   "scripts": {
     "build": "tsup",
     "build:docs": "typedoc",
-    "dev:link": "pnpm link --global && cd node_modules/react && pnpm link --global && cd ../react-dom && pnpm link --global",
-    "dev:unlink": "pnpm unlink --global && cd node_modules/react && pnpm unlink --global && cd ../react-dom && pnpm unlink --global",
+    "dev:link": "bun link --global && cd node_modules/react && bun link --global && cd ../react-dom && bun link --global",
+    "dev:unlink": "bun unlink --global && cd node_modules/react && bun unlink --global && cd ../react-dom && bun unlink --global",
     "dev:storybook": "storybook dev -p 6006",
-    "format": "pnpm dlx sort-package-json && pnpm dlx sort-compiler-options && pnpm dlx sort-compiler-options -c tsconfig.build.json && pnpm dlx prettier --write './**/*.{ts,tsx}' 'tsconfig*.json'",
+    "format": "bun dlx sort-package-json && bun dlx sort-compiler-options && bun dlx sort-compiler-options -c tsconfig.build.json && bun dlx prettier --write './**/*.{ts,tsx}' 'tsconfig*.json'",
     "lint": "eslint ./src/*",
-    "prepublish": "pnpm build",
+    "prepublish": "bun run build",
     "storybook": "storybook dev -p 6006"
   },
   "prettier": "prettier-config-nantokaworks",
